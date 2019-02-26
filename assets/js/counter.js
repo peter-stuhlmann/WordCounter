@@ -3,7 +3,7 @@ function wc_inputOutput() {
     let wc_inputText = document.getElementById("wc-text-input").value
 
     if (wc_inputText == "") {
-        document.getElementById('text-output').innerHTML = "Please enter a text."
+        document.getElementById('wc-words-count-output').innerHTML = "Please enter a text."
     } else {
 
         // words
@@ -50,13 +50,13 @@ function wc_inputOutput() {
 
         
         
-        // vowels
+        // count vowels
         
         const countVowels = (str) => str.split("").filter(letter => 'AEIOUÄÖÜaeiouäöü'.includes(letter)).length
         let resultVowels = 'Vowels: ' + countVowels(wc_inputText)
         
         
-        // consonants
+        // count consonants
         
         const countConsonants = (str) => str.split("").filter(letter => 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyzß'.includes(letter)).length
         let resultConsonants = 'Consonants: ' + countConsonants(wc_inputText)
