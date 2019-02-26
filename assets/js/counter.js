@@ -42,17 +42,30 @@ function wc_inputOutput() {
 
         // characters without spaces
 
-        let charactersCountWithoutSpace = wc_inputText.replace(/ /g, ""); //remove whitespace
+        let charactersCountWithoutSpace = wc_inputText.replace(/ /g, ""); // remove whitespace
 
         let charactersXCount = charactersCountWithoutSpace.length;
 
         let resultXCharacters = 'characters without spaces: ' + charactersXCount
 
+        
+        
+        // vowels
+        
+        const countVowels = (str) => str.split("").filter(letter => 'AEIOUÄÖÜaeiouäöü'.includes(letter)).length
+        let resultVowels = 'Vowels: ' + countVowels(wc_inputText)
+        
+        
+        // consonants
+        
+        const countConsonants = (str) => str.split("").filter(letter => 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyzß'.includes(letter)).length
+        let resultConsonants = 'Consonants: ' + countConsonants(wc_inputText)
 
 
-        //output
 
-        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions}`
+        // output
+
+        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions} <br> ${resultVowels} <br> ${resultConsonants}`
 
     }
 }
