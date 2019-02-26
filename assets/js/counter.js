@@ -1,6 +1,14 @@
 function wc_inputOutput() {
 
-    let wc_inputText = document.getElementById("wc-text-input").value
+    let wc_inputTextOriginal = document.getElementById("wc-text-input").value
+
+    let wc_inputText
+    if (wc_inputTextOriginal[wc_inputTextOriginal.length - 1] == " ") {
+        wc_inputText = wc_inputTextOriginal.substr(0, wc_inputTextOriginal.length - 1)
+    } else {
+        wc_inputText = wc_inputTextOriginal
+    }
+
 
     if (wc_inputText == "") {
         document.getElementById('wc-words-count-output').innerHTML = "Please enter a text."
@@ -10,7 +18,7 @@ function wc_inputOutput() {
 
         let words = wc_inputText.split(' ')
 
-        let wordCount = words.length;
+        let wordCount = words.length + 1;
         wordCount--
 
         let resultWords = 'words: ' + wordCount
@@ -18,9 +26,9 @@ function wc_inputOutput() {
 
         // sentences
 
-        let sentences = wc_inputText.split('. ')
+        let sentences = wc_inputText.split('.')
 
-        let questions = wc_inputText.split('? ')
+        let questions = wc_inputText.split('?')
 
         let sentencesCount = sentences.length;
         sentencesCount--
@@ -32,7 +40,7 @@ function wc_inputOutput() {
         let resultSentences = 'sentences: ' + sentencesCount
         let resultQuestions = 'questions: ' + questionsCount
 
-     
+
         // charcters
 
         let charactersCount = wc_inputText.length;
@@ -48,16 +56,16 @@ function wc_inputOutput() {
 
         let resultXCharacters = 'characters without spaces: ' + charactersXCount
 
-        
-        
+
+
         // count vowels
-        
+
         const countVowels = (str) => str.split("").filter(letter => 'AEIOUÄÖÜaeiouäöü'.includes(letter)).length
         let resultVowels = 'Vowels: ' + countVowels(wc_inputText)
-        
-        
+
+
         // count consonants
-        
+
         const countConsonants = (str) => str.split("").filter(letter => 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyzß'.includes(letter)).length
         let resultConsonants = 'Consonants: ' + countConsonants(wc_inputText)
 
