@@ -6,9 +6,6 @@ function wc_inputOutput() {
         document.getElementById('text-output').innerHTML = "Please enter a text."
     } else {
 
-        // Output input Text 
-        // document.getElementById('text-output').innerHTML = wc_inputText
-
         // words
 
         let words = wc_inputText.split(' ')
@@ -55,10 +52,10 @@ function wc_inputOutput() {
 
         //output
 
-        document.getElementById('result-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions}`
+        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions}`
 
     }
 }
 
 
-document.querySelector('#button').addEventListener('click', wc_inputOutput);
+document.querySelector('#wc-counter-button').addEventListener('click', wc_inputOutput);
