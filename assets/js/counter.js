@@ -26,18 +26,26 @@ function wc_inputOutput() {
 
         // sentences
 
-        let sentences = wc_inputText.split('.')
+        let statements = wc_inputText.split('.')
+        
+        let exclamations = wc_inputText.split('!')
 
         let questions = wc_inputText.split('?')
 
-        let sentencesCount = sentences.length;
-        sentencesCount--
+        let statementsCount = statements.length;
+        statementsCount--
+        
+        let exclamationsCount = exclamations.length;
+        exclamationsCount--
 
         let questionsCount = questions.length;
         questionsCount--
+        
+        let sentencesCount = statementsCount + exclamationsCount + questionsCount;
 
-
-        let resultSentences = 'sentences: ' + sentencesCount
+        let resultSentences = 'Sentences: ' + sentencesCount
+        let resultStatements = 'statements: ' + statementsCount
+        let resultExclamations = 'exclamations: ' + exclamationsCount
         let resultQuestions = 'questions: ' + questionsCount
 
 
@@ -79,7 +87,7 @@ function wc_inputOutput() {
 
         // output
 
-        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions} <br> ${resultVowels} <br> ${resultConsonants} <br> ${resultDigits}`
+        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} (${resultStatements}, ${resultExclamations}, ${resultQuestions}) <br> ${resultVowels} <br> ${resultConsonants} <br> ${resultDigits}`
 
     }
 }
