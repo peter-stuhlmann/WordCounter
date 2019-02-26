@@ -68,12 +68,18 @@ function wc_inputOutput() {
 
         const countConsonants = (str) => str.split("").filter(letter => 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyzß'.includes(letter)).length
         let resultConsonants = 'Consonants: ' + countConsonants(wc_inputText)
+        
+        
+        // count digits
+
+        const countDigits = (str) => str.split("").filter(letter => '0123456789'.includes(letter)).length
+        let resultDigits = 'Digits: ' + countDigits(wc_inputText)
 
 
 
         // output
 
-        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions} <br> ${resultVowels} <br> ${resultConsonants}`
+        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} <br> ${resultQuestions} <br> ${resultVowels} <br> ${resultConsonants} <br> ${resultDigits}`
 
     }
 }
