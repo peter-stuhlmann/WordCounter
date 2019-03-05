@@ -7,7 +7,7 @@ Count words, phrases, characters, vowels, consonants and much more
 ![Screenshot](assets/img/screenshot-desktop.png)
 
 
-Preview: [https://hotpink.eu/wordcounter](https://hotpink.eu/wordcounter/)
+Preview: [https://peter-stuhlmann-webentwicklung.de/wordcounter](https://peter-stuhlmann-webentwicklung.de/wordcounter/)
 
 ---
 
