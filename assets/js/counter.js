@@ -11,7 +11,7 @@ function wc_inputOutput() {
     // Warning if there is no input text
 
     if (wc_inputText == "") {
-        document.getElementById('wc-words-count-output').innerHTML = "Please enter a text."
+        document.getElementById('wc-results-output').innerHTML = "Please enter a text."
     } else {
 
         // count words
@@ -74,7 +74,7 @@ function wc_inputOutput() {
 
         // output
 
-        document.getElementById('wc-words-count-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} (${resultStatements}, ${resultExclamations}, ${resultQuestions}) <br> ${resultVowels} <br> ${resultConsonants} <br> ${resultDigits}`
+        document.getElementById('wc-results-output').innerHTML = `${resultWords} <br> ${resultCharacters} <br> ${resultXCharacters} <br> ${resultSentences} (${resultStatements}, ${resultExclamations}, ${resultQuestions}) <br> ${resultVowels} <br> ${resultConsonants} <br> ${resultDigits}`
     }
 }
 
