@@ -8,9 +8,9 @@
 	],
 	"sourcesContent": [
 		"@import \"partials/variables\";\n@import \"partials/layout\";",
-		"// Paddings and margins\n\n$padding: 20px;\n$margin: $padding;\n\n// Media queries\n\n$desktop: 1170px;\n$tablet: 700px;\n$mobile: 480px;",
-		"body {\n    margin: 0\n}\n\nmain {\n    width: 100%;\n    max-width: $desktop;\n    margin: 0 auto;\n    padding: $padding;\n    box-sizing: border-box;\n\n    #wc-text-input {\n        width: 100%;\n        height: 200px;\n        padding: $padding;\n        box-sizing: border-box\n    }\n}\n"
+		"// Colors\n\n$primaryColor: rgb(0,0,0);\n$secondaryColor: rgb(169,169,169);\n\n// Paddings and margins\n\n$padding: 20px;\n$margin: $padding;\n\n// Media queries\n\n$desktop: 1170px;\n$tablet: 700px;\n$mobile: 480px;",
+		"body {\n    margin: 0;\n    color: $primaryColor\n}\n\nmain {\n    width: 100%;\n    max-width: $desktop;\n    margin: 0 auto;\n    padding: $padding;\n    box-sizing: border-box;\n\n    #wc-text-input {\n        width: 100%;\n        height: 200px;\n        padding: $padding;\n        box-sizing: border-box;\n        outline: 0\n    }\n\n    #wc-results-output {\n        margin-top: 40px;\n        padding-left: 20px;\n        border-left: 2px solid $secondaryColor;\n    }\n}\n"
 	],
 	"names": [],
-	"mappings": "AEAA,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CACZ,GAAC;;AAED,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EDCH,MAAM;ECAZ,MAAM,EAAE,MAAM;EACd,OAAO,EDND,IAAI;ECOV,UAAU,EAAE,UAAU,GAQzB;EAbD,AAOI,IAPA,CAOA,cAAc,CAAC;IACX,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,KAAK;IACb,OAAO,EDZL,IAAI;ICaN,UAAU,EAAE,UAChB,GAAC"
+	"mappings": "AEAA,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;EACT,KAAK,EDAM,KAAU,GCCxB;;AAED,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,IAAI;EACX,SAAS,EDKH,MAAM;ECJZ,MAAM,EAAE,MAAM;EACd,OAAO,EDFD,IAAI;ECGV,UAAU,EAAE,UAAU,GAezB;EApBD,AAOI,IAPA,CAOA,cAAc,CAAC;IACX,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,KAAK;IACb,OAAO,EDRL,IAAI;ICSN,UAAU,EAAE,UAAU;IACtB,OAAO,EAAE,CACb,GAAC;EAbL,AAeI,IAfA,CAeA,kBAAkB,CAAC;IACf,UAAU,EAAE,IAAI;IAChB,YAAY,EAAE,IAAI;IAClB,WAAW,EAAE,GAAG,CAAC,KAAK,CDpBb,QAAgB,GCqB5B"
 }
